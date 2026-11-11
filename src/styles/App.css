@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --pastel-blue : #cfe8ff;
+  --pastel-pink : #ffcfe8;
+  --pastel-green : #cfe8d6;
+  --pastel-yellow : #fff3cf;
+  --pastel-purple : #e8cfe8;
+  --pastel-orange : #ffe8cf;
+
+  --text-dark : #3b3355;
+  --text-soft : #6e6585;
+  --border: #e4dcf0;
+  --accent: #b8a4f0;
+  --white: #ffffff;
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #fffaf5 0%,  #fdf4ff 100%);
+  color: var(--text-dark);
+  min-height: 100vh;
+
+}
+
+.header {
+  background: linear-gradient (
+    90deg,
+    var(--pastel-pink),
+    var(--pastel-orange),
+    var(--pastel-yellow),
+    var(--pastel-green),
+    var(--pastel-blue),
+    var(--pastel-purple)
+
+  );
+
+  padding: 36px 16px;
+  text-align: center;
+  border-bottom: 3px solid var(--white);
+  box-shadow: 0 4px 16px rgba(184, 164, 240, 0.25);
+}
+
+.header h1{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.tagline{
+  margin-top: 6px;
+  color: var(--text-soft);
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card,
+.projects-panel{
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 40px;
+  box-shadow: 0 6px 20px rgba(59, 51, 85, 0,06);
+}
+
+.project-form{
+  background: var(--pastel-blue);
+  padding:32px;
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+project-form h2{
+  font-size:1.8rem;
+  margin-bottom: 8px;
+}
+
+.project-form label{
+  font-weight: 500;
+  margin-top:8px;
+}
+
+.project-form input,
+.project-form textarea{
+  width:100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text-dark);
+  background: var(--white);
+  border:2px solid transparent;
+  border-radius: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.project-form input:focus,
+.project-form textarea:focus,
+.search-bar:focus {
+  outline: none;
+ border-color: var(--accent);
+ box-shadow: 0 0 0 4px rgba(184, 164, 240, 0.25);
+
+}
+
+.project-form textarea{
+  min-height: 120px;
+  resize:vertical;
+
+}
+
+.project-form button{
+  align-self: flex-start;
+  margin-top: 16px;
+  padding: 12px 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text-dark);
+  background: var (--pastel-pink);
+  border: 2px solid var(--white);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  
+
+}
+
+.project-list {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project.card{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:nth-child(4n + 1) {background: var(--pastel-pink); }
+.project-card:nth-child(4n + 2) {background: var(--pastel-green); }
+.project-card:nth-child(4n + 3) {background: var(--pastel-orange); }
+.project-card:nth-child(4n + 4) {background: var(--pastel-blue); }
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(59, 51, 85, 0.1);
+}
+
+.thumbnail{
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  border: 3px solid var(--white);
+  object-fit: cover;
+  background: var(--white);
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.project-info h3{
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.project-info p{
+  color: var(--text-soft);
+
+}
+
+.empty{
+  padding: 32px;
+  text-align: center;
+  color: var(--text-soft);
+
+}
+
+@media(max-width: 600px){
+  .header h1 {
+    font-size: 1.4rem;
+  }
+
+  .comtainer{
+    padding: 24px 12px;
+    gap:28px;
+  }
+
+  .project-form{
+    padding:20px;
+
+  }
+
+  .project-form h2{
+    font-size: 1.4rem;
+
+  }
+
+  .project-form button{
+    width: 100%;
+
+  }
+
+  .project-list{
+    padding:16px;
+
+  }
+
+  .thumbnail{
+    width: 68px;
+    height:68px;
+
+  }
+
+  .project-info h3{
+    font-size: 1.1rem;
+    
+  }
+}
